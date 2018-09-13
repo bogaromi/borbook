@@ -1,1 +1,2 @@
-Az oldal elÈrhetı az al·bbi linken: www.borbook.droppages.com
+Az oldal el√©rhet√µ az al√°bbi linken: www.borbook.droppages.com
+The page is available the following link: www.borbook.droppages.com 
