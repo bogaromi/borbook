@@ -1,0 +1,1 @@
+Az oldal elérhetõ az alábbi linken: www.borbook.droppages.com

@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Bor-Book</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Zoltan Bogaromi">
+    <meta name="keywords" content="Bor,Boraszat,Borbook,wine,">
+    <!--Külső css osztályok-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,800,900" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!--favicon-->
+    <link rel="shortcut icon" href="assets/img/icons/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/img/icons/favicon.ico" type="image/x-icon">
+    <!--Belső css osztályok-->
+    <link rel="stylesheet" type="text/css" href="assets/css/animations.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/infinite-slider.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/sanitize.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="scrollToTop circle fadeToTop"><i class="fa fa-angle-up"></i></div>
+    </div>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Brand/logo -->
+            <a class="navbar-brand" href="#">
+                <img class="nav-logo" src="assets/img/logo.png" alt="Logo">
+            </a>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <!-- Links -->
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                    <li class="nav-item mr-2">
+                        <a class="nav-link" href="#about">Rólunk</a>
+                    </li>
+                    <li class="nav-item mr-2">
+                        <a class="nav-link" href="#services">Szolgáltatás</a>
+                    </li>
+                    <li class="nav-item mr-2">
+                        <a class="nav-link" href="#news">Hírek</a>
+                    </li>
+                    <li class="nav-item mr-2">
+                        <a class="nav-link" href="#partners">Partnereink</a>
+                    </li>
+                    <li class="nav-item mr-2">
+                        <a class="nav-link search-link" onclick="openSearch()"><i class="fas fa-search fa-lg"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="text-box">
+                    <h1 class="animated bounceInDown">Borkedvelők gyüjtőhelye!<br>Tradicionális és trendi.</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--Search section-->
+    <div id="myOverlay" class="overlay">
+        <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+        <div class="overlay-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 ">
+                        <form action="#">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <input type="text" placeholder="Boros események, borászatok, borok">
+                                        </td>
+                                        <td>
+                                            <select name="event">
+                                                <option label="">Összes
+                                                    <optgroup label="Esemény">
+                                                        <option>Fesztivál</option>
+                                                        <option>Szimpozium</option>
+                                                        <option>Egyéb</option>
+                                                    </optgroup>
+                                                    <optgroup label="Borászatok">
+                                                        <option>Megye</option>
+                                                        <option>Borvidék</option>
+                                                        <option>Összes</option>
+                                                    </optgroup>
+                                                    <optgroup label="Borok">
+                                                        <option>Fehér</option>
+                                                        <option>Vörös</option>
+                                                        <option>Rosé</option>
+                                                        <option>Habzóbor</option>
+                                                        <option>Pezsgő</option>
+                                                    </optgroup>
+                                                </option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-search" href="#">Keresés</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--About section-->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 content-heading">
+                    <h2>Rólunk</h2>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="clearfix">
+                    <div class="col-12 mt-4 mb-4 about-text">
+                        <h3>Elkalauzolunk a borok világába, összehozunk más borkedvelőkkel, segítünk megtalálni a legjobb borászatokat, rendezvényeket, borokat.
+Tegyük trendivé a tanninokat, kövess be minket instagrammon, oszd meg boros élményeid és ne feledd:<strong> #borbook</strong>
+        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Counter section-->
+    <section class="counterWrap">
+        <div class=" container-fluid counter-bg">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 mt-4">
+                    <div class="text-center">
+                        <div class="icon"><span class="fa fa-thumbs-up"></span></div>
+                        <div class="info">
+                            <span class="counter" data-count="350">0</span>
+                            <h5>Elégedett ügyfél</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mt-4">
+                    <div class="text-center">
+                        <div class="icon"><span class="fa fa-hand-holding-usd"></span></div>
+                        <div class="info">
+                            <span class="counter" data-count="4325">10</span>
+                            <h5>Értékesített palack</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mt-4">
+                    <div class="text-center">
+                        <div class="icon"><span class="fa fa-handshake"></span></div>
+                        <div class="info">
+                            <span class="counter" data-count="79">0</span>
+                            <h5>Üzleti kapcsolat</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mt-4">
+                    <div class="text-center">
+                        <div class="icon"><span class="fa fa-check-square"></span></div>
+                        <div class="info">
+                            <span class="counter" data-count="26">0</span>
+                            <h5>Megvalósított terv</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Service section-->
+    <section id="services">
+        <div class="container services-header">
+            <div class="row">
+                <div class="col-12 content-heading">
+                    <h2>Szolgáltatás</h2>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-auto service">
+                    <div class="icon-place">
+                        <img class="icons" src="assets/img/glasses-with-wine.png">
+                    </div>
+                    <div class="wrap-collabsible">
+                        <input id="collapOne" class="toggle" type="checkbox">
+                        <label for="collapOne" class="lbl-toggle">Kapcsolat építés</label>
+                        <div class="collapsible-content">
+                            <div class="content-inner">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                </p>
+                                <button type="button" class="btn" data-toggle="modal" data-target="#infoModalOne">Tovább</button>
+                                <button type="button" class="btn" data-toggle="modal" data-target="#infoModalTwo">Megrendel</button>
+                                <!--Kapcsolat építés tovább Modal -->
+                                <div class="modal fade" id="infoModalOne" role="dialog" aria-labelledby="infoModalOne" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="infoModalOne" style="color: #000;">Kapcsolat építés</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                ...Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Kapcsolatépítés rendel Modal -->
+                                <div class="modal fade" id="infoModalTwo" tabindex="-1" role="dialog" aria-labelledby="infoModalTwo" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="infoModalTwo" style="color: #000;">Megrendelés</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                ...Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/Modals-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 service">
+                    <div class="icon-place">
+                        <img class="icons img img-fluid" src="assets/img/wine-list.png">
+                    </div>
+                    <div class="wrap-collabsible">
+                        <input id="collapTwo" class="toggle" type="checkbox">
+                        <label for="collapTwo" class="lbl-toggle">Oktatás</label>
+                        <div class="collapsible-content">
+                            <div class="content-inner">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                </p>
+                                <button type="button" class="btn" data-toggle="modal" data-target="#infoModalThree">Tovább</button>
+                                <button type="button" class="btn" data-toggle="modal" data-target="#infoModalFour">Megrendel</button>
+                                <!--Oktatás tovább Modal -->
+                                <div class="modal fade" id="infoModalThree" role="dialog" aria-labelledby="infoModalThree" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="infoModalThree" style="color: #000;">Oktatás</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                ...Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Oktatás rendel Modal -->
+                                <div class="modal fade" id="infoModalFour" tabindex="-1" role="dialog" aria-labelledby="infoModalFour" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="infoModalFour" style="color: #000;">Megrendelés</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                ...Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/Modals-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 service">
+                    <div class="icon-place">
+                        <img class="icons float-img" src="assets/img/corkscrews-and-bottle-of-wine.png">
+                    </div>
+                    <div class="wrap-collabsible">
+                        <input id="collapThree" class="toggle" type="checkbox">
+                        <label for="collapThree" class="lbl-toggle">Privát sommelier</label>
+                        <div class="collapsible-content">
+                            <div class="content-inner">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                </p>
+                                <button type="button" class="btn" data-toggle="modal" data-target="#infoModalFive">Tovább</button>
+                                <button type="button" class="btn" data-toggle="modal" data-target="#infoModalSix">Megrendel</button>
+                                <!--Sommelier info Modal -->
+                                <div class="modal fade" id="infoModalFive" role="dialog" aria-labelledby="infoModalFive" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="infoModalFive" style="color: #000;">Privát sommelier</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                ...Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Sommelier rendel Modal -->
+                                <div class="modal fade" id="infoModalSix" tabindex="-1" role="dialog" aria-labelledby="infoModalSix" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="infoModalSix" style="color: #000;">Megrendelés</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                ...Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/Modals-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 service">
+                    <div class="icon-place">
+                        <img class="icons float-img" src="assets/img/wine-barrel.png">
+                    </div>
+                    <div class="wrap-collabsible">
+                        <input id="collapFour" class="toggle" type="checkbox">
+                        <label for="collapFour" class="lbl-toggle">Privát önológus</label>
+                        <div class="collapsible-content">
+                            <div class="content-inner">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                </p>
+                                <button type="button" class="btn" data-toggle="modal" data-target="#infoModalSeven">Tovább</button>
+                                <button type="button" class="btn" data-toggle="modal" data-target="#infoModalEight">Megrendel</button>
+                                <!--Önologus info Modal -->
+                                <div class="modal fade" id="infoModalSeven" role="dialog" aria-labelledby="infoModalSeven" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="infoModalSeven" style="color: #000;">Privát önologus</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                ...Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Önologus rendel Modal -->
+                                <div class="modal fade" id="infoModalEight" tabindex="-1" role="dialog" aria-labelledby="infoModalEight" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="infoModalEight" style="color: #000;">Megrendelés</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                ...Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/Modals-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--News section-->
+    <section id="news">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 content-heading">
+                    <h2>Hírek</h2>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h3 class="text-center">Szemezgetés a borok világából.</h3>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6  py-0 pl-auto featcard">
+                    <div id="featured" class="carousel slide carousel-fade" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="card bg-dark text-white">
+                                    <img class="card-img img-fluid" src="assets/img/news1.jpg" alt="">
+                                    <div class="card-img-overlay d-flex linkfeat">
+                                        <a href="news.html" target="_blank" class="align-self-end">
+                                            <span class="badge">Friss</span>
+                                            <h4 class="card-title">Ide jön a hír főcíme!</h4>
+                                            <p class="textfeat" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card bg-dark text-white">
+                                    <img class="card-img img-fluid" src="assets/img/news2.jpg" alt="">
+                                    <div class="card-img-overlay d-flex linkfeat">
+                                        <a href="news.html" target="_blank" class="align-self-end">
+                                            <span class="badge">Friss</span>
+                                            <h4 class="card-title">Ide jön a hír főcíme!</h4>
+                                            <p class="textfeat" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card bg-dark text-white">
+                                    <img class="card-img img-fluid" src="assets/img/news3.jpg" alt="">
+                                    <div class="card-img-overlay d-flex linkfeat">
+                                        <a href="news.html" target="_blank" class="align-self-end">
+                                            <span class="badge">Friss</span>
+                                            <h4 class="card-title">Ide jön a hír főcíme!</h4>
+                                            <p class="textfeat" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 py-0 px-1 d-none d-lg-block">
+                    <div class="row">
+                        <div class="col-6 pb-2 mg-1 ">
+                            <div class="card bg-dark text-white">
+                                <img class="card-img img-fluid" src="assets/img/news7.jpg" alt="">
+                                <div class="card-img-overlay d-flex">
+                                    <a href="news.html" target="_blank" class="align-self-end">
+                                        <span class="badge">Gazdaság</span>
+                                        <h6 class="card-title">Lorem ipsum dolor sit amet</h6>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 pb-2 mg-2 ">
+                            <div class="card bg-dark text-white">
+                                <img class="card-img img-fluid" src="assets/img/news8.jpg" alt="">
+                                <div class="card-img-overlay d-flex">
+                                    <a href="news.html" target="_blank" class="align-self-end">
+                                        <span class="badge">Szórakozás</span>
+                                        <h6 class="card-title">Lorem ipsum dolor sit amet</h6>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 pb-2 mg-3 ">
+                            <div class="card bg-dark text-white">
+                                <img class="card-img img-fluid" src="assets/img/news6.jpg" alt="">
+                                <div class="card-img-overlay d-flex">
+                                    <a href="news.html" target="_blank" class="align-self-end">
+                                        <span class="badge">Szabadidő</span>
+                                        <h6 class="card-title">Lorem ipsum dolor sit amet</h6>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 pb-2 mg-4 ">
+                            <div class="card bg-dark text-white">
+                                <img class="card-img img-fluid" src="assets/img/news4.jpg" alt="">
+                                <div class="card-img-overlay d-flex">
+                                    <a href="news.html" target="_blank" class="align-self-end">
+                                        <span class="badge">Mezőgazdaság</span>
+                                        <h6 class="card-title">Lorem ipsum dolor sit amet</h6>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Testimonials section-->
+    <section id="testimonials" class="section-bg">
+        <div class="overlay-two">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 content-heading">
+                        <h2>Rólunk mondták</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 mt-2 mb-2 pt-5 pb-5">
+                        <div class="box">
+                            <div class="mh-20">
+                                <i class="fas fa-quote-right fa-5x"></i>
+                                <p>Örülök, hogy rátaláltam erre az oldalra. Már eligazodom a borok világában. </p>
+                            </div>
+                            <div class="customer img-fluid">
+                                <img src="assets/img/member-1.jpg">
+                            </div>
+                            <div class="testimonial-info-1">Kovács Géza</div>
+                            <div class="testimonial-info-2">Budapest</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 mt-2 mb-2 pt-5 pb-5">
+                        <div class="box">
+                            <div class="mh-20">
+                                <i class="fas fa-quote-right fa-5x"></i>
+                                <p>Az esküvömre megrendeltük a privát sommeliert. Mindenkinek szívből ajánlom.</p>
+                            </div>
+                            <div class="customer img-fluid">
+                                <img src="assets/img/member-2.jpg">
+                            </div>
+                            <div class="testimonial-info-1">Jakab Sarolta</div>
+                            <div class="testimonial-info-2">Szombathely</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 mt-2 mb-2 pt-5 pb-5">
+                        <div class="box">
+                            <div class="mh-20">
+                                <i class="fas fa-quote-right fa-5x"></i>
+                                <p>Sok új dolgot tanultam, remek emberekkel találkoztam. Köszi BorBook csapat.</p>
+                            </div>
+                            <div class="customer img-fluid">
+                                <img src="assets/img/member-3.jpg">
+                            </div>
+                            <div class="testimonial-info-1">Mohamed Ibrahim</div>
+                            <div class="testimonial-info-2">Pécs</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Partners-->
+    <section id="partners">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 content-heading content-heading-dark">
+                    <h2>Partnereink</h2>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <section class="customer-logos slick-slider">
+                <div class="slick-slide"><img src="assets/img/image-1.png"></div>
+                <div class="slick-slide"><img src="assets/img/image-2.png"></div>
+                <div class="slick-slide"><img src="assets/img/image-3.png"></div>
+                <div class="slick-slide"><img src="assets/img/image-4.png"></div>
+                <div class="slick-slide"><img src="assets/img/image-5.png"></div>
+                <div class="slick-slide"><img src="assets/img/image-6.png"></div>
+                <div class="slick-slide"><img src="assets/img/image-7.png"></div>
+            </section>
+        </div>
+    </section>
+    <!--Footer section-->
+    <footer class="footer footer--bg">
+        <div class="page-section">
+            <div class="container-fluid">
+                <div class="row gutters-100">
+                    <div class="col-md-4 col-lg-3">
+                        <div class="footer__first">
+                            <h2 class="footer__title">BOR BOOK</h2>
+                            <p class="footer-first__paragraph">Borkedvelők gyüjtőhelye!
+                                <br>Tradicionális és trendi </p>
+                            <ul class="footer-first__social-icons">
+                                <li><a href="#"><i class="fab fa-facebook-square fa-2x"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram fa-2x"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin fa-2x"></i></a></li>
+                                <li><a href="#"><i class="fab fa-pinterest-square fa-2x"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-2">
+                        <div class="footer__second">
+                            <h2 class="footer__title">link</h2>
+                            <ul>
+                                <li><a href="#header">Home</a></li>
+                                <li><a href="#about">Rólunk</a></li>
+                                <li><a href="#service">Szolgáltatás</a></li>
+                                <li><a href="#news">Hírek</a></li>
+                                <li><a href="#">Kapcsolat</a></li>
+                                <li><a href="#">Ászf</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 ">
+                        <div class="footer__third text-center">
+                            <h2 class="footer__title">Lépj velünk kapcsolatba</h2>
+                            <ul>
+                                <li><i class="far fa-envelope fa-lg"></i></li>
+                                <li><a href="#">borbook@borbook.com</a></li>
+                                <li><i class="fas fa-mobile-alt fa-lg"></i></li>
+                                <li><a href="#">+0123-345-6789</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer__fourth">
+                            <h4 class="footer__title">INSTAGRAM</h4>
+                            <div class="row">
+                                <ul>
+                                    <li>
+                                        <a href="#"><img class="img-fluid" src="assets/img/insta1.jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img class="img-fluid" src="assets/img/insta2.jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img class="img-fluid" src="assets/img/insta3.jpg" alt=""></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <ul>
+                                    <li>
+                                        <a href="#"><img class="img-fluid" src="assets/img/insta4.jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img class="img-fluid" src="assets/img/insta5.jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img class="img-fluid" src="assets/img/insta6.jpg" alt=""></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- signup start -->
+        <!-- ================ -->
+        <div class="pv-40 dark-translucent-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h3>Iratkozz fel hírlevelünkre!</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="call-to-action text-center">
+                            <form class="form-inline margin-clear d-flex justify-content-center">
+                                <div class="form-group has-feedback">
+                                    <label class="sr-only" for="subscribe3">Email cím</label>
+                                    <input type="email" class="form-control form-control-lg" id="subscribe3" placeholder="Email cím" required="">
+                                    <i class="fa fa-envelope form-control-feedback"></i>
+                                </div>
+                                <button type="submit" class="btn btn-lg btn-gray-transparent btn-animated ml-2">Küld <i class="fa fa-paper-plane"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- signup end -->
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <hr class="footer__horizontal-bar">
+                    <p class="footer__bottom-paragraph">&copy; Copyright 2018 <a href="http://www.zoltanbogaromi.com" style="color: #eee;font-weight:400; letter-spacing: 1.5;"> Bogaromi </a>. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <!--Belső js-->
+    <script type="text/javascript" src="assets/js/counter.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+    <script type="text/javascript" src="assets/js/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.customer-logos').slick({
+                slidesToShow: 6,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 1000,
+                arrows: false,
+                dots: false,
+                pauseOnHover: false,
+                responsive: [{
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 4
+                    }
+                }, {
+                    breakpoint: 520,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                }]
+            });
+        });
+    </script>
+
+</body>
+
+</html>
